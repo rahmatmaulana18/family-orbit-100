@@ -338,61 +338,302 @@
    },
    {
       "id": 6,
-      "question": "Apa yang orang lakukan ketika seekor anjing galak mendekat?",
+      "question": "Sebutkan bagian tubuh yang bergerak saat tertawa?",
       "answers": [
          {
             "id": 1,
             "values": [
-               "Lari",
-               "Kabur",
-               "Ngibrit"
+               "Mulut"
             ],
-            "display": "Lari",
+            "display": "Mulut",
             "point": 30,
             "isShow": false
          },
          {
             "id": 2,
             "values": [
-               "Jongkok",
-               "Tiarap"
+               "Pipi"
             ],
-            "display": "Jongkok",
+            "display": "Pipi",
             "point": 25,
             "isShow": false
          },
          {
             "id": 3,
             "values": [
-               "Lempar Batu",
-               "Melempar Batu"
+               "Perut"
             ],
-            "display": "Lempar Batu",
+            "display": "Perut",
             "point": 20,
             "isShow": false
          },
          {
             "id": 4,
             "values": [
-               "Manjat Pohon",
-               "Panjat Pohon",
-               "Kabur ke Pohon"
+               "Dada"
             ],
-            "display": "Manjat Pohon",
+            "display": "Dada",
+            "point": 15,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 7,
+      "question": "Apa yang pria lakukan saat menemani kekasihnya di salon?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Main HP",
+               "Main Handphone",
+               "Main Ponsel",
+               "Lihat HP",
+               "Lihat Handphone"
+            ],
+            "display": "Main Handphone",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Membaca",
+               "Baca",
+               "Baca Majalah",
+               "Baca Buku",
+               "Baca Artikel",
+               "Membaca Majalah",
+               "Membaca Buku",
+               "Membaca Artikel"
+            ],
+            "display": "Membaca",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Merokok",
+               "Ngerokok",
+               "Ngudud",
+               "Ngudut",
+               "Sebat",
+               "Rokok"
+            ],
+            "display": "Merokok",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Mendengarkan Musik",
+               "Denger Musik",
+               "Dengerin Musik",
+               "Musik",
+               "Dengerin Spotify",
+               "Dengerin Youtube Music"
+            ],
+            "display": "Mendengarkan musik",
             "point": 15,
             "isShow": false
          },
          {
             "id": 5,
             "values": [
-               "Teriak",
-               "Jerit",
-               "Menjerit",
-               "Scream",
-               "Screaming"
+               "Lihat Pemandangan",
+               "Lihat Sekitar",
+               "Lihatin Salon",
+               "Lihatin Cewek",
+               "Lihatin Perempuan"
             ],
-            "display": "Teriak",
+            "display": "Lihat Pemandangan",
+            "point": 15,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 8,
+      "question": "Tempat seperti apa yang biasa disebut tempat mistik/mistis?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Kuburan",
+               "Kubur"
+            ],
+            "display": "Kuburan",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Goa",
+               "Goa Hantu",
+               "Gua",
+               "Gua Hantu"
+            ],
+            "display": "Goa",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Gunung",
+               "Lereng Gunung",
+               "Kaki Gunung"
+            ],
+            "display": "Gunung",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Hutan",
+               "Hutan Belantara"
+            ],
+            "display": "Hutan",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Rumah Tua",
+               "Rumah Terbengkalai"
+            ],
+            "display": "Rumah Tua",
             "point": 10,
+            "isShow": false
+         },
+         {
+            "id": 6,
+            "values": [
+               "Laut",
+               "Lautan",
+               "Tengah Laut",
+               "Pinggir Laut"
+            ],
+            "display": "Laut",
+            "point": 5,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 9,
+      "question": "Kondisi apa yang mengharuskan seseorang untuk berdiri?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Upacara",
+               "Upacara Bendera"
+            ],
+            "display": "Upacara",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Mengantri",
+               "Antri",
+               "Antre"
+            ],
+            "display": "Mengantri",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Naik Bus",
+               "Naik Angkot"
+            ],
+            "display": "Naik Bus",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Nonton Konser",
+               "Lihat Konser",
+               "Konser"
+            ],
+            "display": "Nonton Konser",
+            "point": 15,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 10,
+      "question": "Kegiatan ekstra kurikuler apa aja yang biasa ada di sekolah?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Pramuka"
+            ],
+            "display": "Pramuka",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Paskibra"
+            ],
+            "display": "Paskibra",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Futsal"
+            ],
+            "display": "Futsal",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Basket"
+            ],
+            "display": "Basket",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "PMR"
+            ],
+            "display": "PMR",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 6,
+            "values": [
+               "Bela Diri",
+               "Beladiri",
+               "Taekwondo",
+               "Karate",
+               "Pencak Silat",
+               "Silat"
+            ],
+            "display": "Bela diri",
+            "point": 15,
             "isShow": false
          }
       ]
