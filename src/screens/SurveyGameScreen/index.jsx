@@ -1,22 +1,22 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
-import { correctAudio, wrongAudio } from '@/assets/audio';
+import { applauseAudio, correctAudio, wrongAudio } from '@/assets/audio';
 import { logo } from '@/assets/images';
-
 import CAnswer from '@/components/CAnswer';
 import CCompletePopup from '@/components/CCompletePopup';
 import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
-
 import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
 import { getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
 import Transition from '@/transition';
 
 import style from './style.module.css';
+import CBackground from '@/components/CBackground';
 
+const APPLAUSE_AUDIO = 'applauseAudio';
 const CORRECT_AUDIO = 'correctAudio';
 const WRONG_AUDIO = 'wrongAudio';
 
@@ -39,6 +39,7 @@ const SurveySelectScreen = () => {
       if (isComplete) {
          _handlerStoreCompletedSurvey();
          _handlerShowCompletePopup();
+         playAudio(APPLAUSE_AUDIO);
       } else if (isGameOver) {
          _handlerUpdateAllAnswerList();
          _handlerCheckCompletion();
@@ -142,51 +143,54 @@ const SurveySelectScreen = () => {
    };
 
    return (
-      <div className={style.mainContainer}>
-         <audio id={CORRECT_AUDIO} src={correctAudio}></audio>
-         <audio id={WRONG_AUDIO} src={wrongAudio}></audio>
+      <CBackground>
+         <div className={style.mainContainer}>
+            <audio id={APPLAUSE_AUDIO} src={applauseAudio}></audio>
+            <audio id={CORRECT_AUDIO} src={correctAudio}></audio>
+            <audio id={WRONG_AUDIO} src={wrongAudio}></audio>
 
-         <div className={style.contentContainer}>
-            <div className={style.headerContainer}>
-               <CWrongCounter wrongAmount={wrongAmount} />
+            <div className={style.contentContainer}>
+               <div className={style.headerContainer}>
+                  <CWrongCounter wrongAmount={wrongAmount} />
 
-               <img className={style.mainLogo} src={logo} alt={'main-logo'} />
+                  <img className={style.mainLogo} src={logo} alt={'main-logo'} />
 
-               <CPointCounter point={point} />
+                  <CPointCounter point={point} />
+               </div>
+
+               <CQuestion
+                  isComplete={isComplete}
+                  isGameOver={isGameOver}
+                  isStealPoint={isStealPoint}
+                  question={selectedSurveyData?.question}
+                  onSubmit={_handlerSubmitAnswer}
+               />
+
+               <div className={style.answerContainer}>
+                  {
+                     placeholderData.map((_, index) => {
+                        const data = answerListData?.[index] ?? { id: index + 1, display: index + 1 };
+                        const isDisabled = !data?.values;
+
+                        return (
+                           <CAnswer
+                              isDisabled={isDisabled}
+                              isShow={data?.isShow}
+                              data={data}
+                              key={data?.id}
+                           />
+                        );
+                     })
+                  }
+               </div>
             </div>
 
-            <CQuestion
-               isComplete={isComplete}
-               isGameOver={isGameOver}
-               isStealPoint={isStealPoint}
-               question={selectedSurveyData?.question}
-               onSubmit={_handlerSubmitAnswer}
-            />
-
-            <div className={style.answerContainer}>
-               {
-                  placeholderData.map((_, index) => {
-                     const data = answerListData?.[index] ?? { id: index + 1, display: index + 1 };
-                     const isDisabled = !data?.values;
-
-                     return (
-                        <CAnswer
-                           isDisabled={isDisabled}
-                           isShow={data?.isShow}
-                           data={data}
-                           key={data?.id}
-                        />
-                     );
-                  })
-               }
-            </div>
+            {
+               isShowCompletePopup &&
+               <CCompletePopup onClick={() => navigate('/')} />
+            }
          </div>
-
-         {
-            isShowCompletePopup &&
-            <CCompletePopup onClick={() => navigate('/')} />
-         }
-      </div>
+      </CBackground>
    );
 };
 
