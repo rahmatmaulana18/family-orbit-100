@@ -24,6 +24,7 @@ const CQuestion = ({ isComplete, isGameOver, isStealPoint, question, onSubmit })
    const _handlerSubmit = () => {
       if (answer) {
          onSubmit(answer);
+         setAnswer('');
       }
    };
 

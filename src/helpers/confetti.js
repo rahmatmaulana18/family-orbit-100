@@ -37,35 +37,6 @@ export const fireConfettiComplete = () => {
    }, 250);
 };
 
-// export const fireConfetti = () => {
-//    const end = Date.now() + 3 * 1000;
-
-//    // go Buckeyes!
-//    const colors = ["#FF025E", "#F0F0F0", "#FF925B", "#E83256", "#FF92BE"];
-
-//    (function frame() {
-//       confetti({
-//          particleCount: 2,
-//          angle: 60,
-//          spread: 55,
-//          origin: { x: 0 },
-//          colors: colors,
-//       });
-
-//       confetti({
-//          particleCount: 2,
-//          angle: 120,
-//          spread: 55,
-//          origin: { x: 1 },
-//          colors: colors,
-//       });
-
-//       if (Date.now() < end) {
-//          requestAnimationFrame(frame);
-//       }
-//    })();
-// };
-
 export const fireConfettiCorrect = () => {
    const count = 500,
       defaults = {
