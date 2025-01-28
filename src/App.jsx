@@ -1,18 +1,21 @@
-import { HashRouter, Routes, Route } from 'react-router';
+import { Routes, Route, useLocation } from 'react-router';
+import { AnimatePresence } from 'framer-motion';
 
 import LandingScreen from './screens/LandingScreen';
 import SurveyGameScreen from './screens/SurveyGameScreen';
 import SurveySelectScreen from './screens/SurveySelectScreen';
 
 function App() {
+   const location = useLocation();
+
    return (
-      <HashRouter>
-         <Routes>
+      <AnimatePresence mode={'wait'}>
+         <Routes location={location} key={location.pathname}>
             <Route path={'/'} element={<LandingScreen />} />
-            <Route path={'/survey-game/:surveyId'} element={<SurveyGameScreen />} />
             <Route path={'/survey-select'} element={<SurveySelectScreen />} />
+            <Route path={'/survey-game/:surveyId'} element={<SurveyGameScreen />} />
          </Routes>
-      </HashRouter>
+      </AnimatePresence>
    );
 };
 

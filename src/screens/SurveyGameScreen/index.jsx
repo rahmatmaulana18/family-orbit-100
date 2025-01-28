@@ -10,10 +10,12 @@ import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
 
+import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
 import { getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
+import Transition from '@/transition';
+
 import style from './style.module.css';
-import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
 
 const CORRECT_AUDIO = 'correctAudio';
 const WRONG_AUDIO = 'wrongAudio';
@@ -188,4 +190,4 @@ const SurveySelectScreen = () => {
    );
 };
 
-export default SurveySelectScreen;
+export default Transition(SurveySelectScreen);

@@ -7,6 +7,8 @@ import CButton from '@/components/CButton';
 
 import { playAudio } from '@/helpers/function';
 
+import Transition from '@/transition';
+
 import style from './style.module.css';
 
 const BACKGROUND_AUDIO = 'backgroundAudio';
@@ -33,4 +35,4 @@ const LandingScreen = () => {
    );
 };
 
-export default LandingScreen;
+export default Transition(LandingScreen);

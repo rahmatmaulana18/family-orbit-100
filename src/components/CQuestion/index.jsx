@@ -25,6 +25,8 @@ const CQuestion = ({ isComplete, isGameOver, isStealPoint, question, onSubmit })
       if (answer) {
          onSubmit(answer);
          setAnswer('');
+      } else if (isGameOver) {
+         onSubmit('');
       }
    };
 
@@ -62,7 +64,7 @@ const CQuestion = ({ isComplete, isGameOver, isStealPoint, question, onSubmit })
                }
 
                <CButton
-                  isDisabled={!answer}
+                  isDisabled={!isGameOver && !answer}
                   title={buttonTitle}
                   onClick={_handlerSubmit}
                />

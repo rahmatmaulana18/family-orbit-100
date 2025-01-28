@@ -10,6 +10,7 @@ import COptionButton from '@/components/COptionButton';
 import { getLocalStorage, setLocalStorage } from '@/helpers/function';
 
 import style from './style.module.css';
+import Transition from '@/transition';
 
 const SurveySelectScreen = () => {
    const [completedSurveyIdData] = useState(getLocalStorage('completedSurveyData'));
@@ -69,4 +70,4 @@ const SurveySelectScreen = () => {
    );
 };
 
-export default SurveySelectScreen;
+export default Transition(SurveySelectScreen);
