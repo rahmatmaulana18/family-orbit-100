@@ -1,0 +1,66 @@
+.button {
+   touch-action: manipulation;
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   outline: none;
+   vertical-align: middle;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: 800;
+   color: var(--mainred);
+   padding: 16px 72px;
+   background: var(--lightred);
+   border: 2px solid var(--mainred);
+   border-radius: 12px;
+   transform-style: preserve-3d;
+   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), border 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.button::before {
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: var(--mainred);
+   border-radius: inherit;
+   box-shadow: 0 0 0 2px var(--mainred);
+   transform: translate3d(0, 0.5em, -1em);
+   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.buttonDisabled {
+   color: var(--disablegrey);
+   background: var(--disablelightgrey);
+   border-color: var(--disablegrey);
+   cursor: default;
+}
+
+.buttonDisabled::before {
+   background: var(--disablegrey);
+   box-shadow: 0 0 0 2px var(--disablegrey);
+}
+
+.button:hover:enabled {
+   background: var(--lightred);
+   transform: translate(0, 0.25em);
+}
+
+.button:hover:enabled::before {
+   box-shadow: 0 0 0 2px var(--mainred);
+   transform: translate3d(0, 0.25em, -1em);
+}
+
+.button:active:enabled {
+   background: var(--lightred);
+   transform: translate(0em, 0.75em);
+}
+
+.button:active:enabled::before {
+   box-shadow: 0 0 0 2px var(--mainred), 0 0 var(--white);
+   transform: translate3d(0, 0, -1em);
+}

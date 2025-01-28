@@ -1,0 +1,400 @@
+[
+   {
+      "id": 1,
+      "question": "[EXAMPLE] Keluhan tentang apa yang sering diutarakan karyawan di kantor?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Wifi",
+               "Internet"
+            ],
+            "display": "Wifi",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Catering",
+               "Makanan",
+               "Food"
+            ],
+            "display": "Catering",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "WC",
+               "Kamar Mandi",
+               "Toilet"
+            ],
+            "display": "WC",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "AC",
+               "Air Conditioner",
+               "Pendingin Ruangan"
+            ],
+            "display": "AC",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Kursi",
+               "Bangku"
+            ],
+            "display": "Kursi",
+            "point": 10,
+            "isShow": false
+         },
+         {
+            "id": 6,
+            "values": [
+               "Colokan",
+               "Listrik",
+               "Stopkontak"
+            ],
+            "display": "Colokan",
+            "point": 5,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "question": "Bagaimana reaksi orang saat sedang menonton film horor di bioskop?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Tutup Mata"
+            ],
+            "display": "Tutup Mata",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Teriak",
+               "Screaming",
+               "Menjerit",
+               "Jerit"
+            ],
+            "display": "Teriak",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Tegang",
+               "Panik",
+               "Cemas"
+            ],
+            "display": "Tegang",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Merinding",
+               "Bulu Kuduk",
+               "Takut"
+            ],
+            "display": "Merinding",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Pegangan Tangan",
+               "Pegang Tangan",
+               "Hold Hands"
+            ],
+            "display": "Pegangan Tangan",
+            "point": 10,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "question": "Selain tidur apa yang bisa orang lakukan di atas tempat tidur?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Nonton TV",
+               "Menonton TV",
+               "Netflix",
+               "Netflix and Chill"
+            ],
+            "display": "Nonton TV",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Membaca",
+               "Membaca Buku",
+               "Baca Buku",
+               "Membaca Koran",
+               "Baca Koran",
+               "Membaca Majalah",
+               "Baca Majalah"
+            ],
+            "display": "Membaca",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Ngobrol",
+               "Mengobrol",
+               "Berbicara",
+               "Berbincang",
+               "Gosip",
+               "Bergosip"
+            ],
+            "display": "Mengobrol",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "ML",
+               "Making Love",
+               "Kimpoi",
+               "Kimpoy",
+               "Enak Enak",
+               "Ena Ena",
+               "Berhubungan Seks",
+               "Berhubungan Badan",
+               "Hubungan Badan"
+            ],
+            "display": "ML",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Bermesraan",
+               "Mesra Mesraan",
+               "Foreplay",
+               "Fore Play"
+            ],
+            "display": "Bermesraan",
+            "point": 10,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 4,
+      "question": "Sebutkan sesuatu yang orang rasakan ketika terserang flu?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Hidung Tersumbat",
+               "Pilek",
+               "Hidung Mampet",
+               "Meler"
+            ],
+            "display": "Hidung Tersumbat",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Sakit Kepala",
+               "Sakit Kepala Sebelah",
+               "Pusing",
+               "Migrain"
+            ],
+            "display": "Sakit Kepala",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Susah Napas",
+               "Sesak Napas",
+               "Sulit Napas",
+               "Susah Nafas",
+               "Sesak Nafas",
+               "Sulit Nafas",
+               "Gangguan Pernapasan",
+               "Gangguan Pernafasan"
+            ],
+            "display": "Susah Napas",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Bersin",
+               "Bangkis",
+               "Bersin Bersin",
+               "Bangkis Bangkis"
+            ],
+            "display": "Bersin",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Demam",
+               "Panas",
+               "Fever",
+               "Badan Panas"
+            ],
+            "display": "Demam",
+            "point": 10,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 5,
+      "question": "Apa yang orang lakukan ketika seekor anjing galak mendekat?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Lari",
+               "Kabur",
+               "Ngibrit"
+            ],
+            "display": "Lari",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Jongkok",
+               "Tiarap"
+            ],
+            "display": "Jongkok",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Lempar Batu",
+               "Melempar Batu"
+            ],
+            "display": "Lempar Batu",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Manjat Pohon",
+               "Panjat Pohon",
+               "Kabur ke Pohon"
+            ],
+            "display": "Manjat Pohon",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Teriak",
+               "Jerit",
+               "Menjerit",
+               "Scream",
+               "Screaming"
+            ],
+            "display": "Teriak",
+            "point": 10,
+            "isShow": false
+         }
+      ]
+   },
+   {
+      "id": 6,
+      "question": "Apa yang orang lakukan ketika seekor anjing galak mendekat?",
+      "answers": [
+         {
+            "id": 1,
+            "values": [
+               "Lari",
+               "Kabur",
+               "Ngibrit"
+            ],
+            "display": "Lari",
+            "point": 30,
+            "isShow": false
+         },
+         {
+            "id": 2,
+            "values": [
+               "Jongkok",
+               "Tiarap"
+            ],
+            "display": "Jongkok",
+            "point": 25,
+            "isShow": false
+         },
+         {
+            "id": 3,
+            "values": [
+               "Lempar Batu",
+               "Melempar Batu"
+            ],
+            "display": "Lempar Batu",
+            "point": 20,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Manjat Pohon",
+               "Panjat Pohon",
+               "Kabur ke Pohon"
+            ],
+            "display": "Manjat Pohon",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 5,
+            "values": [
+               "Teriak",
+               "Jerit",
+               "Menjerit",
+               "Scream",
+               "Screaming"
+            ],
+            "display": "Teriak",
+            "point": 10,
+            "isShow": false
+         }
+      ]
+   }
+]

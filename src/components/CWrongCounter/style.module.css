@@ -1,0 +1,16 @@
+.mainContainer {
+   width: 25%;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.icon {
+   width: 72px;
+   opacity: 0.3;
+}
+
+.iconActive {
+   opacity: 1;
+   transform: scale(1.1);
+}

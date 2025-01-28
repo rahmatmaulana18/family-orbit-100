@@ -1,0 +1,71 @@
+.mainContainer {
+   width: 100%;
+   min-height: 100vh;
+   padding: 24px;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../../assets/images/background-container.png);
+   background-position: center;
+   background-size: cover;
+}
+
+.contentContainer {
+   position: relative;
+   width: 100%;
+   max-width: 880px;
+   padding: 40px 56px;
+   align-items: center;
+   border-radius: 24px;
+   background-color: var(--white);
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
+}
+
+.mainLogo {
+   position: absolute;
+   width: 220px;
+   top: -56px;
+   right: -48px;
+   animation-name: grow;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes grow {
+   0% {
+      transform: scale(1);
+   }
+
+   25% {
+      transform: rotate(-355deg);
+   }
+
+   50% {
+      transform: scale(1.15);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+.mainTitle {
+   width: 100%;
+   margin-bottom: 36px;
+   font-size: 32px;
+   font-weight: 600;
+   color: var(--darkgrey);
+}
+
+.mainTitleSeparator {
+   font-weight: bold;
+   color: var(--mainred);
+}
+
+.optionsContainer {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 24px;
+   grid-row-gap: 24px;
+   margin-bottom: 36px;
+}

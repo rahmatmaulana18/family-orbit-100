@@ -1,0 +1,13 @@
+.textField {
+   margin-top: 8px;
+   margin-right: 24px;
+   padding: 16px 32px;
+   flex: 1;
+   border: none;
+   outline: none;
+   border-radius: 12px;
+   background-color: #f4f4f4;
+   font-size: 22px;
+   font-weight: 600;
+   color: var(--darkgrey);
+}

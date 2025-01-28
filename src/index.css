@@ -1,0 +1,87 @@
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+   margin: 0;
+}
+
+body {
+   /* Add accessible line-height */
+   line-height: 1.5;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+   text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   text-wrap: balance;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+   isolation: isolate;
+}
+
+/* Fonts reset */
+:root {
+   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   --mainred: #FF005D;
+   --lightred: #FFF0F6;
+   --darkgrey: #464556;
+   --disablegrey: #C7C7C7;
+   --disablelightgrey: #F0F0F0;
+   --white: #FBFBFB;
+}
+
+/* Set default flex for container */
+div {
+   display: flex;
+   flex-direction: column;
+}
