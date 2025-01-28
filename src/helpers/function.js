@@ -5,3 +5,8 @@ export const setLocalStorage = (key, value) => {
 export const getLocalStorage = (key) => {
    return JSON.parse(localStorage.getItem(key));
 };
+
+export const playAudio = (id) => {
+   const audio = document.getElementById(id);
+   audio?.play();
+};

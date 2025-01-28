@@ -1,21 +1,28 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
+import { correctAudio, wrongAudio } from '@/assets/audio';
 import { logo } from '@/assets/images';
 
 import CAnswer from '@/components/CAnswer';
+import CCompletePopup from '@/components/CCompletePopup';
 import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
 
-import { getLocalStorage, setLocalStorage } from '@/helpers/function';
+import { getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
 import style from './style.module.css';
+import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
+
+const CORRECT_AUDIO = 'correctAudio';
+const WRONG_AUDIO = 'wrongAudio';
 
 const SurveySelectScreen = () => {
    const placeholderData = new Array(6).fill(0);
    const selectedSurveyData = getLocalStorage('selectedSurveyData');
 
+   const [isComplete, setIsComplete] = useState(false);
    const [isGameOver, setIsGameOver] = useState(false);
    const [isShowCompletePopup, setIsShowCompletePopup] = useState(false);
    const [point, setPoint] = useState(0);
@@ -27,9 +34,13 @@ const SurveySelectScreen = () => {
    const isStealPoint = wrongAmount == 3;
 
    const _handlerSubmitAnswer = (val) => {
-      if (isGameOver) {
+      if (isComplete) {
+         _handlerStoreCompletedSurvey();
+         _handlerShowCompletePopup();
+      } else if (isGameOver) {
          _handlerUpdateAllAnswerList();
          _handlerCheckCompletion();
+         playAudio(CORRECT_AUDIO);
       } else {
          _handlerValidateAnswer(val);
       }
@@ -46,17 +57,28 @@ const SurveySelectScreen = () => {
          }
       });
 
-      if (answerId) {
-         // Correct answer
+      if (answerId && isStealPoint) {
+         // Correct answer within stealing point
+         _handlerUpdateAnswerList(answerId);
+         _handlerUpdatePoint(answerId);
+         fireConfettiCorrect();
+         playAudio(CORRECT_AUDIO);
+         setIsGameOver(true);
+      } else if (answerId) {
+         // Correct answer and there stil chances
          _handlerUpdateAnswerList(answerId);
          _handlerUpdatePoint(answerId);
          _handlerCheckCompletion();
+         fireConfettiCorrect();
+         playAudio(CORRECT_AUDIO);
       } else if (isStealPoint) {
          // Wrong answer and there are no chances left
          setIsGameOver(true);
+         playAudio(WRONG_AUDIO);
       } else {
          // Wrong answer and there still chances
          setWrongAmount(wrongAmount + 1);
+         playAudio(WRONG_AUDIO);
       }
    };
 
@@ -93,9 +115,15 @@ const SurveySelectScreen = () => {
          }
       });
 
-      if (isComplete) {
-         _handlerStoreCompletedSurvey();
-         _handlerShowCompletePopup();
+      if (isComplete && !isGameOver) {
+         // Complete all answer without losing
+         setTimeout(() => {
+            _handlerStoreCompletedSurvey();
+            _handlerShowCompletePopup();
+         }, 1000);
+      } else if (isComplete) {
+         // Complete all answer
+         setIsComplete(true);
       }
    };
 
@@ -107,13 +135,15 @@ const SurveySelectScreen = () => {
    };
 
    const _handlerShowCompletePopup = () => {
-      setTimeout(() => {
-         setIsShowCompletePopup(true);
-      }, 2000);
+      fireConfettiComplete();
+      setIsShowCompletePopup(true);
    };
 
    return (
       <div className={style.mainContainer}>
+         <audio id={CORRECT_AUDIO} src={correctAudio}></audio>
+         <audio id={WRONG_AUDIO} src={wrongAudio}></audio>
+
          <div className={style.contentContainer}>
             <div className={style.headerContainer}>
                <CWrongCounter wrongAmount={wrongAmount} />
@@ -124,6 +154,7 @@ const SurveySelectScreen = () => {
             </div>
 
             <CQuestion
+               isComplete={isComplete}
                isGameOver={isGameOver}
                isStealPoint={isStealPoint}
                question={selectedSurveyData?.question}
@@ -151,7 +182,7 @@ const SurveySelectScreen = () => {
 
          {
             isShowCompletePopup &&
-            <div></div>
+            <CCompletePopup onClick={() => navigate('/')} />
          }
       </div>
    );

@@ -5,7 +5,7 @@ import style from './style.module.css';
 import CButton from '../CButton';
 import CTextField from '../CTextField';
 
-const CQuestion = ({ isGameOver, isStealPoint, question, onSubmit }) => {
+const CQuestion = ({ isComplete, isGameOver, isStealPoint, question, onSubmit }) => {
    const [answer, setAnswer] = useState('');
    const isShowBadge = isGameOver || isStealPoint;
 
@@ -27,6 +27,21 @@ const CQuestion = ({ isGameOver, isStealPoint, question, onSubmit }) => {
       }
    };
 
+   const _handlerGetButtonTitle = () => {
+      let title = '';
+
+      if (isComplete) {
+         title = 'Finish';
+      } else if (isGameOver) {
+         title = 'Open All Answers';
+      } else {
+         title = 'Submit';
+      }
+
+      return title;
+   };
+   const buttonTitle = _handlerGetButtonTitle();
+
    return (
       <>
          <div className={style.mainContainer}>
@@ -47,7 +62,7 @@ const CQuestion = ({ isGameOver, isStealPoint, question, onSubmit }) => {
 
                <CButton
                   isDisabled={!answer}
-                  title={isGameOver ? 'Open All Answers' : 'Submit'}
+                  title={buttonTitle}
                   onClick={_handlerSubmit}
                />
             </div>
@@ -61,6 +76,7 @@ const CQuestion = ({ isGameOver, isStealPoint, question, onSubmit }) => {
 };
 
 CQuestion.propTypes = {
+   isComplete: PropTypes.bool,
    isGameOver: PropTypes.bool,
    isStealPoint: PropTypes.bool,
    question: PropTypes.string,

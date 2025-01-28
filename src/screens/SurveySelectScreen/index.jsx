@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-import { logo } from '@/assets/images';
 import surveyData from '@/assets/data/survey.json';
+import { logo } from '@/assets/images';
 
 import CButton from '@/components/CButton';
 import COptionButton from '@/components/COptionButton';
