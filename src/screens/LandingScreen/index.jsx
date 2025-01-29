@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useNavigate } from 'react-router';
 
 import { logo } from '@/assets/images';
@@ -24,9 +25,10 @@ const LandingScreen = () => {
             <audio id={'backgroundAudio'} src={backgroundAudio} loop={true}></audio>
 
             <img
+               alt={'main-logo'}
                className={style.mainLogo}
                draggable={false}
-               src={logo} alt={'main-logo'}
+               src={logo}
                onClick={() => playAudio(BACKGROUND_AUDIO)}
             />
 

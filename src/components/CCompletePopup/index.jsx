@@ -9,7 +9,11 @@ function CCompletePopup({ onClick }) {
    return (
       <div className={style.backgroundMask}>
          <div className={style.contentContainer}>
-            <img src={iconComplete} alt={'icon-complete'} />
+            <img
+               alt={'icon-complete'}
+               draggable={false}
+               src={iconComplete}
+            />
 
             <p className={style.messageTitle}>
                {'Congratulations and thank you for playing!!!'}

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -33,12 +34,12 @@ const SurveySelectScreen = () => {
       <CBackground>
          <div className={style.mainContainer}>
             <div className={style.contentContainer}>
-               <img className={style.mainLogo} src={logo} alt={'main-logo'} />
-
-               <h1 className={style.mainTitle}>
-                  <span className={style.mainTitleSeparator}>{'| '}</span>
-                  {'Select a survey'}
-               </h1>
+               <img
+                  alt={'main-logo'}
+                  className={style.mainLogo}
+                  draggable={false}
+                  src={logo}
+               />
 
                <div className={style.optionsContainer}>
                   {
@@ -60,11 +61,18 @@ const SurveySelectScreen = () => {
                   }
                </div>
 
-               <CButton
-                  isDisabled={!selectedSurveyId}
-                  title={'Select'}
-                  onClick={_handlerStartGame}
-               />
+               <div className={style.ctaContainer}>
+                  <h1 className={style.mainTitle}>
+                     <span className={style.mainTitleSeparator}>{'| '}</span>
+                     {'Select a survey'}
+                  </h1>
+
+                  <CButton
+                     isDisabled={!selectedSurveyId}
+                     title={'Select'}
+                     onClick={_handlerStartGame}
+                  />
+               </div>
             </div>
          </div>
       </CBackground>

@@ -23,6 +23,7 @@ canvas,
 svg {
    display: block;
    max-width: 100%;
+   -webkit-user-drag: none;
 }
 
 /* Inherit fonts for form controls */

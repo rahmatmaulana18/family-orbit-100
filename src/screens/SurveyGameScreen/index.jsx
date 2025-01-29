@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
@@ -153,7 +154,12 @@ const SurveySelectScreen = () => {
                <div className={style.headerContainer}>
                   <CWrongCounter wrongAmount={wrongAmount} />
 
-                  <img className={style.mainLogo} src={logo} alt={'main-logo'} />
+                  <img
+                     alt={'main-logo'}
+                     className={style.mainLogo}
+                     draggable={false}
+                     src={logo}
+                  />
 
                   <CPointCounter point={point} />
                </div>

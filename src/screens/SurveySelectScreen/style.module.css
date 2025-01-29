@@ -10,7 +10,7 @@
    position: relative;
    width: 100%;
    max-width: 880px;
-   padding: 40px 56px;
+   padding: 120px 56px 56px;
    align-items: center;
    border-radius: 24px;
    background-color: var(--white);
@@ -20,8 +20,7 @@
 .mainLogo {
    position: absolute;
    width: 220px;
-   top: -56px;
-   right: -48px;
+   top: -64px;
    animation-name: grow;
    animation-duration: 2s;
    animation-iteration-count: infinite;
@@ -46,8 +45,7 @@
 }
 
 .mainTitle {
-   width: 100%;
-   margin-bottom: 36px;
+   margin-right: 24px;
    font-size: 32px;
    font-weight: 600;
    color: var(--darkgrey);
@@ -59,10 +57,35 @@
 }
 
 .optionsContainer {
+   width: 100%;
    display: grid;
+   gap: 1.5rem;
    grid-template-columns: repeat(5, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   grid-column-gap: 24px;
-   grid-row-gap: 24px;
    margin-bottom: 36px;
+}
+
+.ctaContainer {
+   width: 100%;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@media (max-width: 768px) {
+   .contentContainer {
+      padding: 120px 32px 48px;
+   }
+
+   .mainTitle {
+      margin-bottom: 24px;
+      font-size: 24px;
+   }
+
+   .optionsContainer {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .ctaContainer {
+      flex-direction: column;
+   }
 }
