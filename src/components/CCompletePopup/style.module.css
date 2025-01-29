@@ -10,6 +10,21 @@
    justify-content: center;
    align-items: center;
    background-color: rgba(72, 71, 78, 0.5);
+   animation-name: fadein;
+   animation-duration: 0.3s;
+   animation-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+   0% {
+      visibility: hidden;
+      opacity: 0;
+   }
+
+   100% {
+      visibility: visible;
+      opacity: 1;
+   }
 }
 
 .contentContainer {
