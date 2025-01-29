@@ -79,6 +79,7 @@ h6 {
    --disablegrey: #C7C7C7;
    --disablelightgrey: #F0F0F0;
    --white: #FBFBFB;
+   --boxshadow: rgba(66, 71, 75, 0.1) 0px 6px 16px;
 }
 
 /* Set default flex for container */

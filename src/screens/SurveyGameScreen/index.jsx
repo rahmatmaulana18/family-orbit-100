@@ -10,13 +10,14 @@ import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
 import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
-import { getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
+import { adjustAudioVolume, getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
 import Transition from '@/transition';
 
 import style from './style.module.css';
 import CBackground from '@/components/CBackground';
 
+const BACKGROUND_AUDIO = 'backgroundAudio';
 const APPLAUSE_AUDIO = 'applauseAudio';
 const CORRECT_AUDIO = 'correctAudio';
 const WRONG_AUDIO = 'wrongAudio';
@@ -53,13 +54,14 @@ const SurveySelectScreen = () => {
    const _handlerValidateAnswer = (val) => {
       let answerId = null;
 
-      answerListData.forEach(answer => {
+      for (const answer of answerListData) {
          const correctAnswer = answer.values.find(answerValue => answerValue.toLowerCase().includes(val.toLowerCase()));
 
          if (correctAnswer) {
             answerId = answer.id;
+            break;
          }
-      });
+      }
 
       if (answerId && isStealPoint) {
          // Correct answer within stealing point
@@ -107,6 +109,7 @@ const SurveySelectScreen = () => {
          item.isShow = true;
          return item;
       });
+      fireConfettiCorrect();
       setAnswerListData(newAnswerListData);
    };
 
@@ -141,6 +144,11 @@ const SurveySelectScreen = () => {
    const _handlerShowCompletePopup = () => {
       fireConfettiComplete();
       setIsShowCompletePopup(true);
+   };
+
+   const _handlerBackToHome = () => {
+      adjustAudioVolume(BACKGROUND_AUDIO, 1);
+      navigate('/');
    };
 
    return (
@@ -193,7 +201,7 @@ const SurveySelectScreen = () => {
 
             {
                isShowCompletePopup &&
-               <CCompletePopup onClick={() => navigate('/')} />
+               <CCompletePopup onClick={_handlerBackToHome} />
             }
          </div>
       </CBackground>

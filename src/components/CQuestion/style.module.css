@@ -5,7 +5,7 @@
    padding: 40px 56px;
    border-radius: 24px;
    background-color: var(--white);
-   box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 16px;
+   box-shadow: var(--boxshadow)
 }
 
 .questionTitle {
@@ -35,11 +35,13 @@
    font-weight: bold;
    text-align: center;
    color: var(--white);
+   opacity: 0;
    transition: all 0.3s ease;
 }
 
 .eventBadgeActive {
    margin-top: -54px;
+   opacity: 1;
 }
 
 @media (max-width: 768px) {

@@ -10,3 +10,11 @@ export const playAudio = (id) => {
    const audio = document.getElementById(id);
    audio?.play();
 };
+
+export const adjustAudioVolume = (id, volume) => {
+   const audio = document.getElementById(id);
+
+   if (audio) {
+      audio.volume = volume;
+   }
+};

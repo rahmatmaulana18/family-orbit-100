@@ -8,11 +8,12 @@
 .icon {
    width: 72px;
    opacity: 0.3;
+   transition: all 0.2s ease;
 }
 
 .iconActive {
    opacity: 1;
-   transform: scale(1.1);
+   transform: scale(1.15);
 }
 
 @media (max-width: 768px) {

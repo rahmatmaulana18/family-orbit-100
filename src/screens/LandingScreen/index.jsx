@@ -2,9 +2,8 @@
 import { useNavigate } from 'react-router';
 
 import { logo } from '@/assets/images';
-import backgroundAudio from '@/assets/audio/background.mp3';
 import CButton from '@/components/CButton';
-import { playAudio } from '@/helpers/function';
+import { adjustAudioVolume, playAudio } from '@/helpers/function';
 import Transition from '@/transition';
 
 import style from './style.module.css';
@@ -17,13 +16,12 @@ const LandingScreen = () => {
 
    const _handlerStartGame = () => {
       navigate('/survey-select');
+      adjustAudioVolume(BACKGROUND_AUDIO, 0.1);
    };
 
    return (
       <CBackground>
          <div className={style.mainContainer}>
-            <audio id={'backgroundAudio'} src={backgroundAudio} loop={true}></audio>
-
             <img
                alt={'main-logo'}
                className={style.mainLogo}
