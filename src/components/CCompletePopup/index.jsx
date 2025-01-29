@@ -11,6 +11,7 @@ function CCompletePopup({ onClick }) {
          <div className={style.contentContainer}>
             <img
                alt={'icon-complete'}
+               className={style.icon}
                draggable={false}
                src={iconComplete}
             />

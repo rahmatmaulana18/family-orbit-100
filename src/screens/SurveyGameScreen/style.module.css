@@ -57,7 +57,23 @@
 }
 
 @media (max-width: 768px) {
+   .mainContainer {
+      padding: 48px 24px;
+   }
+
+   .headerContainer {
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .mainLogo {
+      width: 210px;
+      margin-bottom: 16px;
+   }
+
    .answerContainer {
+      padding: 32px;
+      gap: 16px;
       grid-template-columns: repeat(1, 1fr);
    }
 }

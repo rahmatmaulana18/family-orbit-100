@@ -41,3 +41,18 @@
    color: var(--white);
    text-align: center;
 }
+
+@media (max-width: 768px) {
+   .answer {
+      min-height: 96px;
+      padding: 12px
+   }
+
+   .displayTitle {
+      font-size: 24px;
+   }
+
+   .pointTitle {
+      font-size: 24px;
+   }
+}

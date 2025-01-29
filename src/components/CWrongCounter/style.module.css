@@ -14,3 +14,15 @@
    opacity: 1;
    transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+   .mainContainer {
+      width: 50%;
+      margin-bottom: 16px;
+      order: 1;
+   }
+
+   .icon {
+      width: 56px;
+   }
+}

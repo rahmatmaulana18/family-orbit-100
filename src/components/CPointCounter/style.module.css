@@ -20,3 +20,14 @@
    text-align: center;
    color: var(--mainred);
 }
+
+@media (max-width: 768px) {
+   .mainContainer {
+      width: 50%;
+      order: 2;
+   }
+
+   .pointValueTitle {
+      font-size: 24px;
+   }
+}

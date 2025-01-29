@@ -51,3 +51,21 @@
    text-align: center;
    color: var(--mainred);
 }
+
+@media (max-width: 768px) {
+   .contentContainer {
+      width: 90%;
+      height: 60%;
+      padding: 32px;
+   }
+
+   .icon {
+      width: 140px;
+   }
+
+   .messageTitle {
+      max-width: 100%;
+      margin: 24px auto;
+      font-size: 24px;
+   }
+}

@@ -41,3 +41,22 @@
 .eventBadgeActive {
    margin-top: -54px;
 }
+
+@media (max-width: 768px) {
+   .mainContainer {
+      padding: 32px;
+   }
+
+   .questionTitle {
+      margin-bottom: 16px;
+      font-size: 22px;
+   }
+
+   .inputContainer {
+      flex-direction: column;
+   }
+
+   .eventBadge {
+      font-size: 22px;
+   }
+}

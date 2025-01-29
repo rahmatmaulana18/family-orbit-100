@@ -31,3 +31,9 @@
    opacity: 20%;
    cursor: default;
 }
+
+@media (max-width: 768px) {
+   .button {
+      height: 88px;
+   }
+}
