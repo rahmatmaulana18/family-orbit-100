@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router';
 
 import surveyData from '@/assets/data/survey.json';
 import { logo } from '@/assets/images';
+import CBackgroundImage from '@/components/CBackgroundImage';
 import CButton from '@/components/CButton';
 import COptionButton from '@/components/COptionButton';
 import { getLocalStorage, setLocalStorage } from '@/helpers/function';
-import Transition from '@/transition';
+import Transition from '@/helpers/transition';
 
 import style from './style.module.css';
-import CBackground from '@/components/CBackground';
 
 const SurveySelectScreen = () => {
    const [completedSurveyIdData] = useState(getLocalStorage('completedSurveyData'));
@@ -31,7 +31,7 @@ const SurveySelectScreen = () => {
    };
 
    return (
-      <CBackground>
+      <CBackgroundImage>
          <div className={style.mainContainer}>
             <div className={style.contentContainer}>
                <img
@@ -75,7 +75,7 @@ const SurveySelectScreen = () => {
                </div>
             </div>
          </div>
-      </CBackground>
+      </CBackgroundImage>
    );
 };
 

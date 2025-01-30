@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 
 import style from './style.module.css';
+import { TAP_AUDIO } from '@/helpers/constant';
+import { playAudio } from '@/helpers/function';
 
 const COptionButton = ({ isActive, isDisabled, title, onClick }) => {
    return (
       <button
          className={`${style.button} ${isActive ? style.buttonActive : ''} ${isDisabled ? style.buttonDisabled : ''}`}
          disabled={isDisabled}
-         onClick={onClick}
+         onClick={() => {
+            playAudio(TAP_AUDIO);
+            onClick();
+         }}
       >
          {title}
       </button>

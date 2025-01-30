@@ -616,7 +616,9 @@
          {
             "id": 5,
             "values": [
-               "PMR"
+               "PMR",
+               "Palang Merah",
+               "Palang Merah Remaja"
             ],
             "display": "PMR",
             "point": 15,

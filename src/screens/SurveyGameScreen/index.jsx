@@ -2,25 +2,20 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
-import { applauseAudio, correctAudio, wrongAudio } from '@/assets/audio';
 import { logo } from '@/assets/images';
 import CAnswer from '@/components/CAnswer';
+import CBackgroundImage from '@/components/CBackgroundImage';
 import CCompletePopup from '@/components/CCompletePopup';
 import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
 import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
+import { APPLAUSE_AUDIO, BACKGROUND_AUDIO, CORRECT_AUDIO, WRONG_AUDIO } from '@/helpers/constant';
 import { adjustAudioVolume, getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
-import Transition from '@/transition';
+import Transition from '@/helpers/transition';
 
 import style from './style.module.css';
-import CBackground from '@/components/CBackground';
-
-const BACKGROUND_AUDIO = 'backgroundAudio';
-const APPLAUSE_AUDIO = 'applauseAudio';
-const CORRECT_AUDIO = 'correctAudio';
-const WRONG_AUDIO = 'wrongAudio';
 
 const SurveySelectScreen = () => {
    const placeholderData = new Array(6).fill(0);
@@ -148,16 +143,12 @@ const SurveySelectScreen = () => {
 
    const _handlerBackToHome = () => {
       adjustAudioVolume(BACKGROUND_AUDIO, 1);
-      navigate('/');
+      navigate('/', { replace: true });
    };
 
    return (
-      <CBackground>
+      <CBackgroundImage>
          <div className={style.mainContainer}>
-            <audio id={APPLAUSE_AUDIO} src={applauseAudio}></audio>
-            <audio id={CORRECT_AUDIO} src={correctAudio}></audio>
-            <audio id={WRONG_AUDIO} src={wrongAudio}></audio>
-
             <div className={style.contentContainer}>
                <div className={style.headerContainer}>
                   <CWrongCounter wrongAmount={wrongAmount} />
@@ -204,7 +195,7 @@ const SurveySelectScreen = () => {
                <CCompletePopup onClick={_handlerBackToHome} />
             }
          </div>
-      </CBackground>
+      </CBackgroundImage>
    );
 };
 

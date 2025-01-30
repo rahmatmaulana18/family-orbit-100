@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
    ornament1,
    ornament2,
@@ -10,7 +12,7 @@ import {
 
 import style from './style.module.css';
 
-function CBackground({ children }) {
+function CBackgroundImage({ children }) {
    return (
       <div className={style.mainContainer}>
          <img className={style.ornament1} src={ornament1} alt={'test'} draggable={false} />
@@ -30,4 +32,8 @@ function CBackground({ children }) {
    );
 };
 
-export default CBackground;
+CBackgroundImage.propTypes = {
+   children: PropTypes.element
+};
+
+export default CBackgroundImage;
