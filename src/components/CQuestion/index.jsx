@@ -11,7 +11,7 @@ const CQuestion = ({ isComplete, isGameOver, isStealPoint, question, onSubmit })
 
    const _handlerOnChange = (event) => {
       const value = event.target.value;
-      const regex = /^([a-zA-Z0-9 _-]+)$/;
+      const regex = /^([a-zA-Z0-9 ]+)$/;
       const isValid = regex.test(value);
 
       if (!value) {

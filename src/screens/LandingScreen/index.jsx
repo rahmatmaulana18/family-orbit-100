@@ -8,6 +8,7 @@ import { adjustAudioVolume, playAudio } from '@/helpers/function';
 import Transition from '@/helpers/transition';
 
 import style from './style.module.css';
+import { useEffect } from 'react';
 
 const BACKGROUND_AUDIO = 'backgroundAudio';
 
@@ -16,8 +17,12 @@ const LandingScreen = () => {
 
    const _handlerStartGame = () => {
       navigate('/survey-select');
-      adjustAudioVolume(BACKGROUND_AUDIO, 0.1);
+      adjustAudioVolume(BACKGROUND_AUDIO, 0.2);
    };
+
+   useEffect(() => {
+      adjustAudioVolume(BACKGROUND_AUDIO, 0.6);
+   }, []);
 
    return (
       <CBackgroundImage>
@@ -26,8 +31,9 @@ const LandingScreen = () => {
                alt={'main-logo'}
                className={style.mainLogo}
                draggable={false}
+               id={'mainLogo'}
                src={logo}
-               onClick={() => playAudio(BACKGROUND_AUDIO)}
+               onClick={() => playAudio(BACKGROUND_AUDIO, 0.6)}
             />
 
             <CButton title={'Start Game'} onClick={_handlerStartGame} />

@@ -10,8 +10,8 @@ import CPointCounter from '@/components/CPointCounter';
 import CQuestion from '@/components/CQuestion';
 import CWrongCounter from '@/components/CWrongCounter';
 import { fireConfettiComplete, fireConfettiCorrect } from '@/helpers/confetti';
-import { APPLAUSE_AUDIO, BACKGROUND_AUDIO, CORRECT_AUDIO, WRONG_AUDIO } from '@/helpers/constant';
-import { adjustAudioVolume, getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
+import { APPLAUSE_AUDIO, CORRECT_AUDIO, GAME_OVER_LOST_AUDIO, GAME_OVER_WIN_AUDIO, WRONG_AUDIO } from '@/helpers/constant';
+import { getLocalStorage, playAudio, setLocalStorage } from '@/helpers/function';
 
 import Transition from '@/helpers/transition';
 
@@ -32,7 +32,7 @@ const SurveySelectScreen = () => {
    const { surveyId } = useParams();
    const isStealPoint = wrongAmount == 3;
 
-   const _handlerSubmitAnswer = (val) => {
+   const _handlerSubmit = (val) => {
       if (isComplete) {
          _handlerStoreCompletedSurvey();
          _handlerShowCompletePopup();
@@ -58,24 +58,25 @@ const SurveySelectScreen = () => {
          }
       }
 
-      if (answerId && isStealPoint) {
-         // Correct answer within stealing point
-         _handlerUpdateAnswerList(answerId);
-         _handlerUpdatePoint(answerId);
-         fireConfettiCorrect();
-         playAudio(CORRECT_AUDIO);
-         setIsGameOver(true);
-      } else if (answerId) {
-         // Correct answer and there stil chances
+      if (answerId) {
+         // Correct answer
          _handlerUpdateAnswerList(answerId);
          _handlerUpdatePoint(answerId);
          _handlerCheckCompletion();
          fireConfettiCorrect();
+      }
+
+      if (answerId && isStealPoint) {
+         // Correct answer during stealing point round
+         setIsGameOver(true);
+         playAudio(GAME_OVER_WIN_AUDIO);
+      } else if (answerId) {
+         // Correct answer and there stil chances
          playAudio(CORRECT_AUDIO);
       } else if (isStealPoint) {
-         // Wrong answer and there are no chances left
+         // Wrong answer during stealing point round
          setIsGameOver(true);
-         playAudio(WRONG_AUDIO);
+         playAudio(GAME_OVER_LOST_AUDIO);
       } else {
          // Wrong answer and there still chances
          setWrongAmount(wrongAmount + 1);
@@ -119,9 +120,14 @@ const SurveySelectScreen = () => {
 
       if (isComplete && !isGameOver) {
          // Complete all answer without losing
+         setIsComplete(true);
+         setIsGameOver(true);
+         playAudio(GAME_OVER_WIN_AUDIO);
+
          setTimeout(() => {
             _handlerStoreCompletedSurvey();
             _handlerShowCompletePopup();
+            playAudio(APPLAUSE_AUDIO);
          }, 1000);
       } else if (isComplete) {
          // Complete all answer
@@ -142,7 +148,6 @@ const SurveySelectScreen = () => {
    };
 
    const _handlerBackToHome = () => {
-      adjustAudioVolume(BACKGROUND_AUDIO, 1);
       navigate('/', { replace: true });
    };
 
@@ -168,7 +173,7 @@ const SurveySelectScreen = () => {
                   isGameOver={isGameOver}
                   isStealPoint={isStealPoint}
                   question={selectedSurveyData?.question}
-                  onSubmit={_handlerSubmitAnswer}
+                  onSubmit={_handlerSubmit}
                />
 
                <div className={style.answerContainer}>

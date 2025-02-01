@@ -6,10 +6,11 @@ export const getLocalStorage = (key) => {
    return JSON.parse(localStorage.getItem(key));
 };
 
-export const playAudio = (id) => {
+export const playAudio = (id, volume = 1) => {
    const audio = document.getElementById(id);
 
    if (audio) {
+      adjustAudioVolume(volume);
       stopAudio(id);
       audio.play();
    }

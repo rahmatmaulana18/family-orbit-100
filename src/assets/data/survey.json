@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "question": "[EXAMPLE] Keluhan tentang apa yang sering diutarakan karyawan di kantor?",
+      "question": "Keluhan tentang fasilitas apa yang sering diutarakan karyawan di kantor?",
       "answers": [
          {
             "id": 1,
@@ -185,7 +185,10 @@
                "Ena Ena",
                "Berhubungan Seks",
                "Berhubungan Badan",
-               "Hubungan Badan"
+               "Hubungan Badan",
+               "Making Baby",
+               "Sex",
+               "Seks"
             ],
             "display": "ML",
             "point": 15,
@@ -403,9 +406,11 @@
                "Baca Majalah",
                "Baca Buku",
                "Baca Artikel",
+               "Baca Koran",
                "Membaca Majalah",
                "Membaca Buku",
-               "Membaca Artikel"
+               "Membaca Artikel",
+               "Membaca Koran"
             ],
             "display": "Membaca",
             "point": 25,
