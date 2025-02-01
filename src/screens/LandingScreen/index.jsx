@@ -17,11 +17,11 @@ const LandingScreen = () => {
 
    const _handlerStartGame = () => {
       navigate('/survey-select');
-      adjustAudioVolume(BACKGROUND_AUDIO, 0.2);
+      adjustAudioVolume(BACKGROUND_AUDIO, 0.1);
    };
 
    useEffect(() => {
-      adjustAudioVolume(BACKGROUND_AUDIO, 0.6);
+      adjustAudioVolume(BACKGROUND_AUDIO, 0.5);
    }, []);
 
    return (
