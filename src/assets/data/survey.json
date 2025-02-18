@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "question": "Keluhan tentang fasilitas apa yang sering diutarakan karyawan di kantor?",
+      "question": "[Example] Keluhan tentang fasilitas apa yang sering diutarakan karyawan di kantor?",
       "answers": [
          {
             "id": 1,
@@ -168,7 +168,9 @@
                "Berbicara",
                "Berbincang",
                "Gosip",
-               "Bergosip"
+               "Bergosip",
+               "Gossip",
+               "Bergossip"
             ],
             "display": "Mengobrol",
             "point": 20,
@@ -210,69 +212,97 @@
    },
    {
       "id": 4,
-      "question": "Sebutkan sesuatu yang orang rasakan ketika terserang flu?",
+      "question": "Gambar apa yang biasa ada atau diaplikasikan dalam sebuah kalender?",
       "answers": [
          {
             "id": 1,
             "values": [
-               "Hidung Tersumbat",
-               "Pilek",
-               "Hidung Mampet",
-               "Meler"
+               "Wanita",
+               "Cewek",
+               "Perempuan",
+               "Wanita",
+               "Cewek Cantik",
+               "Cewek Seksi",
+               "Wanita Cantik"
             ],
-            "display": "Hidung Tersumbat",
+            "display": "Perempuan Cantik",
             "point": 30,
             "isShow": false
          },
          {
             "id": 2,
             "values": [
-               "Sakit Kepala",
-               "Sakit Kepala Sebelah",
-               "Pusing",
-               "Migrain"
+               "Alam",
+               "Keindahan Alam",
+               "Gunung",
+               "Laut",
+               "Hutan",
+               "Sawah"
             ],
-            "display": "Sakit Kepala",
+            "display": "Keindahan Alam",
             "point": 25,
             "isShow": false
          },
          {
             "id": 3,
             "values": [
-               "Susah Napas",
-               "Sesak Napas",
-               "Sulit Napas",
-               "Susah Nafas",
-               "Sesak Nafas",
-               "Sulit Nafas",
-               "Gangguan Pernapasan",
-               "Gangguan Pernafasan"
+               "Kendaraan",
+               "Mobil",
+               "Motor",
+               "Mobil Balap",
+               "Motor Balap",
+               "Bengkel",
+               "Sepeda"
             ],
-            "display": "Susah Napas",
+            "display": "Kendaraan Bermotor",
             "point": 20,
             "isShow": false
          },
          {
             "id": 4,
             "values": [
-               "Bersin",
-               "Bangkis",
-               "Bersin Bersin",
-               "Bangkis Bangkis"
+               "Hewan",
+               "Hewan Liar",
+               "Keindahan Hewan",
+               "Kumpulan Hewan",
+               "Binatang",
+               "Keindahan Binatang",
+               "Kebun Binatang",
+               "Kumpulan Binatang",
+               "Satwa",
+               "Marga Satwa"
             ],
-            "display": "Bersin",
+            "display": "Keindahan Hewan",
             "point": 15,
             "isShow": false
          },
          {
             "id": 5,
             "values": [
-               "Demam",
-               "Panas",
-               "Fever",
-               "Badan Panas"
+               "Foto Keluarga",
+               "Keluarga",
+               "Foto Kawinan",
+               "Kawinan",
+               "Foto Pernikahan",
+               "Pernikahan",
+               "Foto Anak",
+               "Anak"
             ],
-            "display": "Demam",
+            "display": "Foto Keluarga",
+            "point": 10,
+            "isShow": false
+         },
+         {
+            "id": 6,
+            "values": [
+               "Foto Partai",
+               "Partai",
+               "Foto Politik",
+               "Politik",
+               "Foto TNI",
+               "TNI"
+            ],
+            "display": "Foto Partai",
             "point": 10,
             "isShow": false
          }
@@ -297,9 +327,10 @@
             "id": 2,
             "values": [
                "Jongkok",
-               "Tiarap"
+               "Tiarap",
+               "Sembunyi"
             ],
-            "display": "Jongkok",
+            "display": "Sembunyi",
             "point": 25,
             "isShow": false
          },
@@ -318,7 +349,7 @@
             "values": [
                "Manjat Pohon",
                "Panjat Pohon",
-               "Kabur ke Pohon"
+               "Naik Pohon"
             ],
             "display": "Manjat Pohon",
             "point": 15,
@@ -341,41 +372,70 @@
    },
    {
       "id": 6,
-      "question": "Sebutkan bagian tubuh yang bergerak saat tertawa?",
+      "question": "Di mana biasanya anak sekolah menyatakan cinta kepada pasangannya?",
       "answers": [
          {
             "id": 1,
             "values": [
-               "Mulut"
+               "Kantin",
+               "Di Kantin",
+               "Tempat Makan",
+               "Restoran"
             ],
-            "display": "Mulut",
+            "display": "Kantin",
             "point": 30,
             "isShow": false
          },
          {
             "id": 2,
             "values": [
-               "Pipi"
+               "Kelas",
+               "Ruang Kelas",
+               "Ruangan Kelas",
+               "Depan Kelas",
+               "Depan Lab"
             ],
-            "display": "Pipi",
+            "display": "Kelas",
             "point": 25,
             "isShow": false
          },
          {
             "id": 3,
             "values": [
-               "Perut"
+               "Taman",
+               "Di Taman",
+               "Halaman",
+               "Di Halaman",
+               "Belakang Sekolah",
+               "Halaman Belakang"
             ],
-            "display": "Perut",
+            "display": "Taman",
             "point": 20,
             "isShow": false
          },
          {
             "id": 4,
             "values": [
-               "Dada"
+               "Parkir",
+               "Parkiran",
+               "Tempat Parkir",
+               "Di Parkir",
+               "Di Parkiran",
+               "Di Tempat Parkir"
             ],
-            "display": "Dada",
+            "display": "Tempat Parkir",
+            "point": 15,
+            "isShow": false
+         },
+         {
+            "id": 4,
+            "values": [
+               "Laboratorium",
+               "Lab",
+               "Depan Laboratorium",
+               "Depan Lab"
+            ],
+            "display": "Laboratorium",
             "point": 15,
             "isShow": false
          }
@@ -383,84 +443,6 @@
    },
    {
       "id": 7,
-      "question": "Apa yang pria lakukan saat menemani kekasihnya di salon?",
-      "answers": [
-         {
-            "id": 1,
-            "values": [
-               "Main HP",
-               "Main Handphone",
-               "Main Ponsel",
-               "Lihat HP",
-               "Lihat Handphone"
-            ],
-            "display": "Main Handphone",
-            "point": 30,
-            "isShow": false
-         },
-         {
-            "id": 2,
-            "values": [
-               "Membaca",
-               "Baca",
-               "Baca Majalah",
-               "Baca Buku",
-               "Baca Artikel",
-               "Baca Koran",
-               "Membaca Majalah",
-               "Membaca Buku",
-               "Membaca Artikel",
-               "Membaca Koran"
-            ],
-            "display": "Membaca",
-            "point": 25,
-            "isShow": false
-         },
-         {
-            "id": 3,
-            "values": [
-               "Merokok",
-               "Ngerokok",
-               "Ngudud",
-               "Ngudut",
-               "Sebat",
-               "Rokok"
-            ],
-            "display": "Merokok",
-            "point": 20,
-            "isShow": false
-         },
-         {
-            "id": 4,
-            "values": [
-               "Mendengarkan Musik",
-               "Denger Musik",
-               "Dengerin Musik",
-               "Musik",
-               "Dengerin Spotify",
-               "Dengerin Youtube Music"
-            ],
-            "display": "Mendengarkan musik",
-            "point": 15,
-            "isShow": false
-         },
-         {
-            "id": 5,
-            "values": [
-               "Lihat Pemandangan",
-               "Lihat Sekitar",
-               "Lihatin Salon",
-               "Lihatin Cewek",
-               "Lihatin Perempuan"
-            ],
-            "display": "Lihat Pemandangan",
-            "point": 15,
-            "isShow": false
-         }
-      ]
-   },
-   {
-      "id": 8,
       "question": "Tempat seperti apa yang biasa disebut tempat mistik/mistis?",
       "answers": [
          {
@@ -490,7 +472,8 @@
             "values": [
                "Gunung",
                "Lereng Gunung",
-               "Kaki Gunung"
+               "Kaki Gunung",
+               "Gunung Merapi"
             ],
             "display": "Gunung",
             "point": 20,
@@ -500,7 +483,9 @@
             "id": 4,
             "values": [
                "Hutan",
-               "Hutan Belantara"
+               "Hutan Belantara",
+               "Tengah Hutan",
+               "Dalam Hutan"
             ],
             "display": "Hutan",
             "point": 15,
@@ -510,7 +495,8 @@
             "id": 5,
             "values": [
                "Rumah Tua",
-               "Rumah Terbengkalai"
+               "Rumah Terbengkalai",
+               "Rumah "
             ],
             "display": "Rumah Tua",
             "point": 10,
@@ -531,7 +517,7 @@
       ]
    },
    {
-      "id": 9,
+      "id": 8,
       "question": "Kondisi apa yang mengharuskan seseorang untuk berdiri?",
       "answers": [
          {
@@ -559,7 +545,9 @@
             "id": 3,
             "values": [
                "Naik Bus",
-               "Naik Angkot"
+               "Naik Bis",
+               "Naik Angkot",
+               "Naik Angkutan Umum"
             ],
             "display": "Naik Bus",
             "point": 20,
@@ -573,73 +561,6 @@
                "Konser"
             ],
             "display": "Nonton Konser",
-            "point": 15,
-            "isShow": false
-         }
-      ]
-   },
-   {
-      "id": 10,
-      "question": "Kegiatan ekstra kurikuler apa aja yang biasa ada di sekolah?",
-      "answers": [
-         {
-            "id": 1,
-            "values": [
-               "Pramuka"
-            ],
-            "display": "Pramuka",
-            "point": 30,
-            "isShow": false
-         },
-         {
-            "id": 2,
-            "values": [
-               "Paskibra"
-            ],
-            "display": "Paskibra",
-            "point": 25,
-            "isShow": false
-         },
-         {
-            "id": 3,
-            "values": [
-               "Futsal"
-            ],
-            "display": "Futsal",
-            "point": 20,
-            "isShow": false
-         },
-         {
-            "id": 4,
-            "values": [
-               "Basket"
-            ],
-            "display": "Basket",
-            "point": 15,
-            "isShow": false
-         },
-         {
-            "id": 5,
-            "values": [
-               "PMR",
-               "Palang Merah",
-               "Palang Merah Remaja"
-            ],
-            "display": "PMR",
-            "point": 15,
-            "isShow": false
-         },
-         {
-            "id": 6,
-            "values": [
-               "Bela Diri",
-               "Beladiri",
-               "Taekwondo",
-               "Karate",
-               "Pencak Silat",
-               "Silat"
-            ],
-            "display": "Bela diri",
             "point": 15,
             "isShow": false
          }
